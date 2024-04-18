@@ -1,0 +1,14 @@
+<tbody>
+    <? foreach ($data as $item) : ?>
+    <tr>
+        <? foreach ($item as $columns) : ?>
+            <td><?= $columns; ?></td>
+        <? endforeach; ?>
+        <td>
+            <a href="<?= $type . '/edit/' . $item[0]; ?>">Редактировать</a>
+            <a href="<?= $type . '/delete/' . $item[0]; ?>">Удалить</a>
+        </td>
+    </tr>
+    <? endforeach; ?>
+</tbody>
+</table>

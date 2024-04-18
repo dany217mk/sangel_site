@@ -55,4 +55,10 @@
         return $fetch_admin['admin_id'];
       }
 
+      public function getAdmin(){
+        $query = "SELECT * FROM `admins`
+         WHERE `admin_id` = '" . $_COOKIE['uid'] . "'";
+        return $this->returnAssoc($query);
+      }
+
  }

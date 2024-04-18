@@ -1,0 +1,20 @@
+<header>
+  <div>
+    <div>
+      <img src="<?=IMG;?>/logo.png" alt="">
+      <h1>Sangel</h1>
+    </div>
+    <? if (isset($this->admin)): ?>
+    <div id="account" onclick="openAccountMenu()">
+      <h6><?= $this->getAdmin()['admin_name']; ?></h6>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+    <div id="account-menu">
+          <ul>
+            <li><a href="<?= FULL_SITE_ROOT; ?>/logout"><i class="fas fa-sign-out-alt"></i><span>Выйти</span></a></li>
+          </ul>
+    </div>
+    <? endif; ?>
+  </div>
+</header>
+  

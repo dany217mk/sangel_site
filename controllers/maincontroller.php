@@ -9,7 +9,6 @@ class MainController extends Controller
       header("Location: " . FULL_SITE_ROOT . "/report/noexist");
       die();
     }
-    $title = SERVER_NAME;
     $styles = [CSS . '/home.css'];
     $scripts = [JS . '/home.js'];
     $title = SERVER_NAME;
