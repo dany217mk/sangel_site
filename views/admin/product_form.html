@@ -1,0 +1,33 @@
+<main>
+  <div class="clm">
+  <div>
+    <div class="linkBack">
+        <a href="<?=FULL_SITE_ROOT?>/products">назад</a>
+      </div><h1>Изменение таблицы авторы</h1>
+</div>
+<? if (!empty($errors)): ?>
+        <? foreach ($errors as $error): ?>
+            <div class="alert alert-danger text-center alert-reg"><?= $error; ?></div>
+        <? endforeach; ?>
+<? endif; ?>
+<form method="post">
+  <div>
+    <label>Наименование</label>
+    <input type="text" class="text" name="product_name" value="<?= isset($product) ? $product['product_name']: ''; ?>">
+  </div>
+  <div>
+    <label>Описание товара</label>
+    <input type="text" class="text" name="product_description" value="<?= isset($product) ? $product['product_description']: ''; ?>">
+  </div>
+  <div>
+    <label>Открыт ли товар к продаже (1 - Да, 0 - Нет)</label>
+    <input type="number" class="text" name="product_reservetion_access" value="<?= isset($product) ? $product['product_reservetion_access']: ''; ?>">
+  </div>
+  <div>
+    <label>Цена</label>
+    <input type="number" class="text" name="product_price" value="<?= isset($product) ? $product['product_price']: ''; ?>">
+  </div>
+    <input type="submit" value="Сохранить">
+</form>
+</div>
+</main>

@@ -16,8 +16,9 @@ $routes = array(
   ),
   'ProductController' => array(
     'products' => 'index',
-    'products/edit/([0-9]+)' => 'edit/$1',
-    'products/delete/([0-9]+)' => 'delete/$1',
+    'product/add' => 'add',
+    'product/edit/([0-9]+)' => 'edit/$1',
+    'product/delete/([0-9]+)' => 'delete/$1',
   ),
   'MainController' => array(
       'report/([a-z]+)' => 'report/$1',

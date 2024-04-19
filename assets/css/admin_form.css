@@ -1,0 +1,72 @@
+main form{
+  display: block;
+  margin-left: 10%;
+}
+main form > div{
+  margin-bottom: 20px;
+  display: flex;
+}
+form input.text{
+  padding: .5rem 1rem;
+  min-width: 250px;
+  margin-left: 20px;
+}
+form label{
+  margin-right: 10px;
+}
+.alert{
+  position: relative;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  text-align: center;
+  font-size: 14px;
+  width: 240px;
+}
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  width: 40%;
+}
+form select{
+  padding: .5rem 1rem;
+  min-width: 250px;
+  margin-left: 20px;
+}
+form .img{
+  margin-left: 20px;
+  border: 1px solid #ccc;
+}
+.current{
+  width: 200px;
+  display: block;
+}
+form table{
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px auto;
+}
+form td, th {
+  border: 1px solid #9f9f9f;
+  padding: 10px;
+  text-align: left;
+}
+form th{
+  position: relative;
+  transition: all 0.4s ease;
+}
+.linkBack a{
+  padding: .5rem 1rem;
+  color: #434343;
+  display: block;
+  font-size: 20px;
+  border-radius: 100px;
+  transition: all 0.4s ease;
+  text-decoration: none;;
+}
+.linkBack a:hover{
+  border-radius: .25rem;
+  color: #434343;
+  box-shadow: 0 0 0 6px #f3f1ed;
+  background: #ccc;
+}

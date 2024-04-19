@@ -346,3 +346,14 @@ tbody td:last-child a:last-child{
 main td img{
   width: 200px;
 }
+.link_add{
+  border: 2px solid #ccc;
+  padding: 1rem;
+  color: #434343;
+  text-decoration: none;
+  margin-bottom: 20px;
+  width: 200px;
+  margin-left: 20px;
+  display: block;
+  transition: all 0.3s ease;
+}
