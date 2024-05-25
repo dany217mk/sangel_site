@@ -1,3 +1,6 @@
+.clm > div h2{
+  margin-bottom: 40px
+}
 main form{
   display: block;
   margin-left: 10%;
@@ -10,6 +13,20 @@ form input.text{
   padding: .5rem 1rem;
   min-width: 250px;
   margin-left: 20px;
+}
+form textarea{
+  padding: .5rem 1rem;
+  min-width: 350px;
+  margin-left: 20px;
+  resize: vertical;
+  font-size: 13px;
+  border: 1px solid #cecece;
+  background: #F6F6f6;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+.save{
+  margin-bottom: 40px;
 }
 form label{
   margin-right: 10px;
@@ -55,10 +72,12 @@ form th{
   position: relative;
   transition: all 0.4s ease;
 }
+.linkBack{
+  margin: 20px 10px;
+}
 .linkBack a{
   padding: .5rem 1rem;
   color: #434343;
-  display: block;
   font-size: 20px;
   border-radius: 100px;
   transition: all 0.4s ease;
@@ -69,4 +88,7 @@ form th{
   color: #434343;
   box-shadow: 0 0 0 6px #f3f1ed;
   background: #ccc;
+}
+.linkBack a i{
+  padding-right: 10px;
 }

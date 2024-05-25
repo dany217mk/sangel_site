@@ -8,6 +8,7 @@
     define("JS", ASSETS . "/js");
     define("CSS", ASSETS . "/css");
     define("IMG", ASSETS . "/img");
+    define("IMG_PRODUCT", ASSETS . "/img_product");
     define("LIBS", ASSETS . "/libs");
     define("REQUEST_URI_EXIST", "/sangel_site/");
     define("SERVER_NAME", 'Sangel');

@@ -34,6 +34,26 @@ class Helper
     return htmlentities(mysqli_real_escape_string($this->con, $val));
   }
 
+  public function checkImg($val)
+        {
+          $bool = true;
+          $allowed = array('gif', 'png', 'jpeg', 'jpg');
+          $filename = $_FILES[$val]['name'];
+          $ext = pathinfo($filename, PATHINFO_EXTENSION);
+          if (!in_array($ext, $allowed)) {
+            header("Location: " . FULL_SITE_ROOT . "/report/errorImg");
+            die;
+            $bool = false;
+          } else {
+            if ($_FILES[$val]['size'] > 10000000){
+              header("Location: " . FULL_SITE_ROOT . "/report/errorImg");
+              die;
+              $bool = false;
+            }
+          }
+          return $bool;
+        }
+
 
 
 }

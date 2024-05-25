@@ -7,10 +7,10 @@
 	src: url(../font/BaronNeue.otf);
 }
 :root{
-  --main: #2d73a7;
-	--main2: #5584AC;
-	--main3: #95D1CC;
-	--main4: #F6F2D4;
+  --main: #AEB884;
+	--main2: #FED07B;
+	--main3: #DFA36D;
+	--main4: #F2EBD8;
   --font: #434343;
   --background_body: #edeef070;
 }
@@ -90,11 +90,11 @@ button, input[type="submit"] {
 }
 button:hover, input[type="submit"]:hover {
 	color: #fff;
-  background: rgb(250, 63, 118);
+  background: #AEB884;
 }
 button:focus, input[type="submit"]:focus {
   outline: none;
-  box-shadow: 0 0 0 4px #cbd6ee;
+  box-shadow: 0 0 0 4px #ebf2ce;
 }
 input[type="text"], select, input[type="password"]{
 	width: 300px;
@@ -106,12 +106,12 @@ input[type="text"], select, input[type="password"]{
 	transition: all 0.4s ease;
 }
 input[type="text"]:hover, select:hover,  input[type="password"]:hover{
- border-color: rgb(249, 137, 180);
+ border-color: #AEB884;
 }
 input[type="text"]:focus, select:focus, input[type="password"]:focus{
- border-color: rgb(249, 137, 180);
+ border-color: #AEB884;
  outline: none;
- box-shadow: 0 0 0 0.2rem rgba(236, 126, 187, 0.35);
+ box-shadow: 0 0 0 0.2rem #ebf2ce;
 }
 input[type=radio] {
     width: 1rem;

@@ -7,7 +7,7 @@
 	src: url(../font/BaronNeue.otf);
 }
 :root{
-  --main: #7366ff;
+  --main: #AEB884;
   --font: #434343;
   --background_body: #edeef070;
 }
@@ -29,7 +29,7 @@ a{
   transition: all 0.4s ease;
 }
 a:hover{
-	color: rgb(250, 63, 118);
+	color: #a4ad7d;
   text-decoration: underline;
 }
 ::-webkit-scrollbar-thumb {

@@ -35,12 +35,12 @@
     background-color: #fff3cd;
     border-color: #ffeeba;
   }
-  .error{
+  .error, .errorImg{
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb;
   }
-  .error hr{
+  .error hr, .errorImg hr{
     border-color: #f5c6cb;
   }
   .noreg, .undefinedUser, .connectAdmin, .development, .technical, .noexist{
@@ -74,4 +74,3 @@
     display: block;
     margin: 0 auto;
   }
-  

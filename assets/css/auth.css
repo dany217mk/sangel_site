@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-  
+
   }
   body > .main{
     background: #fff;
@@ -23,12 +23,12 @@ body{
   .header{
     border-bottom: 1px solid #b9b9b9;
     position:relative;
-    color: rgb(250, 63, 118);
+    color: #AEB884;
     font-size:1rem;
     font-family: 'BaronNeue';
     font-weight:700;
     margin:.2em 0;
-    position:relative;
+    position: relative;
     padding: .5rem 1rem;
   }
   .body > div{

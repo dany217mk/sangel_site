@@ -27,7 +27,7 @@ class AdminController extends Controller
       } else{
             $errors['login'] = "Администратора с таким логином не существует";
         }
-    } 
+    }
       $title = "Admin panel";
       $style_path = [CSS . '/auth.css'];
       require_once   './views/admin/auth.html';

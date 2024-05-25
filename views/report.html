@@ -31,6 +31,9 @@
       <?php elseif($incident == 'error'): ?>
          <h3>Произошла неизвестная ошибка</h3>
          <p>Если эта ошибка постоянно появляется, свяжитесь с <a href="<?=CONTACT_ADMIN?>">администрацией</a></p>
+       <?php elseif($incident == 'errorImg'): ?>
+          <h3>Изображение несоответствует формату</h3>
+          <p>Если эта ошибка постоянно появляется, свяжитесь с <a href="<?=CONTACT_ADMIN?>">администрацией</a></p>
        <?php elseif($incident == 'noreg'): ?>
          <h3>Войдите в аккаунт, чтобы выполнить данную операцию</h3>
          <?php elseif($incident == 'noexist'): ?>
@@ -57,4 +60,3 @@
    <?php if ($incident == 'technical' || $incident == 'development'): ?>
    <script type="text/javascript" src="<?=JS?>/donut.js"></script>
    <?php endif; ?>
-   
