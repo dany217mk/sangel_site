@@ -14,8 +14,8 @@ $routes = array(
   ),
   'ReservationController' => array(
     'reservations' => 'index',
-    'reservations/edit/([0-9]+)' => 'edit/$1',
-    'reservations/delete/([0-9]+)' => 'delete/$1',
+    'reservation/edit/([0-9]+)' => 'edit/$1',
+    'reservation/delete/([0-9]+)' => 'delete/$1',
   ),
   'ProductController' => array(
     'products' => 'index',
