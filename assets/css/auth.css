@@ -93,7 +93,7 @@ body{
   input[type="submit"] {
     display: block;
   }
-  input[type="text"], input[type="password"]{
+  input[type="text"], input[type="password"], select{
     width: auto;
     border-radius: 0;
   }

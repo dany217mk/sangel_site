@@ -15,7 +15,7 @@
                   <td><?= $columns; ?></td>
            <? endforeach; ?>
            <td>
-             <? if ($item[0] != 1): ?>
+             <? if ($item[0] != 1 and $this->getAdmin()['admin_level'] == 1): ?>
                <a href="<?= $type . '/delete/' . $item[0]; ?>">Удалить</a>
              <? endif; ?>
            </td>

@@ -42,7 +42,7 @@
         header('Location: ' . FULL_SITE_ROOT);
     }
 
-    public function checkIfAdminExistAuth($login, $password){
+    public function checkIfAdminExistAuth($login, $password='NONE'){
         $query = "SELECT * FROM `admins` WHERE `admin_login` = '$login';";
         $res = $this->returnActionQuery($query);
         if (mysqli_num_rows($res) == 0){
@@ -66,5 +66,19 @@
             $query = "SELECT `admin_id`, `admin_name`, `admin_login`, `admin_level` FROM `admins`;";
             return parent::returnAllNum($query);
         }
+
+      public function add($name, $login, $password, $level)
+      {
+          $query = "INSERT INTO `admins` (`admin_name`, `admin_login`, `admin_password`, `admin_level`) VALUES ('$name', '$login', '$password', '$level');";
+          parent::actionQuery($query);
+      }
+
+      public function delete($id){
+        $query = "
+            DELETE FROM `admins` WHERE `admin_id` = $id;
+        ";
+        parent::actionQuery($query);
+      }
+
 
  }
