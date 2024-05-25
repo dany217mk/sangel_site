@@ -44,7 +44,7 @@
 
     public function checkIfAdminExistAuth($login, $password){
         $query = "SELECT * FROM `admins` WHERE `admin_login` = '$login';";
-        $res = $this->returnActionQuery($query); 
+        $res = $this->returnActionQuery($query);
         if (mysqli_num_rows($res) == 0){
           return -1;
         }
@@ -60,5 +60,11 @@
          WHERE `admin_id` = '" . $_COOKIE['uid'] . "'";
         return $this->returnAssoc($query);
       }
+
+      public function getAll()
+        {
+            $query = "SELECT `admin_id`, `admin_name`, `admin_login`, `admin_level` FROM `admins`;";
+            return parent::returnAllNum($query);
+        }
 
  }

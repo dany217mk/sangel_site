@@ -5,11 +5,10 @@
       <li><a href="<?= FULL_SITE_ROOT; ?>/reservations"><span><i class="fa-solid fa-cart-shopping"></i></span><span>Предзаказы</span></a></li>
       <li><a href="<?= FULL_SITE_ROOT; ?>/products"><span><i class="fa-brands fa-product-hunt"></i></span><span>Продукты</span></a></li>
       <? if ($this->getAdmin()['admin_level'] == 1): ?>
-      <li><a href="<?= FULL_SITE_ROOT; ?>/list_admin"><span><i class="fa-solid fa-user-tie"></i></span><span>Администраторы</span></a></li>
+      <li><a href="<?= FULL_SITE_ROOT; ?>/admins"><span><i class="fa-solid fa-user-tie"></i></span><span>Администраторы</span></a></li>
       <? endif; ?>
       <? else: ?>
       <li><a href="<?= FULL_SITE_ROOT; ?>">Авторизация</a></li>
       <? endif; ?>
     </ul>
   </nav>
-  

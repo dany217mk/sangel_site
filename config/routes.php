@@ -2,6 +2,7 @@
 $routes = array(
   'AdminController' => array(
     'admin_auth' => 'auth',
+    'admins' => 'views',
     'logout' => 'logout',
   ),
   'FeedbackController' => array(

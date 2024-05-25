@@ -33,6 +33,29 @@ class AdminController extends Controller
       require_once   './views/admin/auth.html';
     }
 
+
+
+    public function actionViews(){
+      if (!$this->getIsAuth()) {
+        exit("Error");
+      }
+      $title = 'Администраторы';
+      $data = $this->adminModel->getAll();
+      $styles = [];
+      $headers = array(
+          'ID', 'Имя', 'login', 'Уровень доступа',
+      );
+      $type = "admin";
+      require_once   './views/admin/common/head.html';
+      require_once   './views/admin/common/header.html';
+      require_once   './views/admin/common/nav.html';
+      require_once  './views/admin/admins.php';
+      require_once   './views/admin/common/footer.html';
+      require_once   './views/admin/common/foot.html';
+      }
+
+
+
     public function actionLogout(){
         $this->adminModel->logout();
       }
