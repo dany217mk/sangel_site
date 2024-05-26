@@ -1,3 +1,6 @@
+body main{
+  min-height: 65vh;
+}
 .note{
     padding: .75rem 1.25rem;
     font-weight: 400;
@@ -73,4 +76,21 @@
     width: 40%;
     display: block;
     margin: 0 auto;
+  }
+  header > div > div:nth-child(2) a {
+      color: var(--font) !important;
+  }
+  header > div > div:nth-child(1) a b {
+      color: #434343 !important;
+      text-shadow: 0 0 4px #fff !important;
+  }
+  footer{
+    background: var(--main5) !important;
+  }
+  .copyrightText{
+    background: black !important;
+  }
+  header > div > div:nth-child(2) a:hover, header > div > div:nth-child(2) button:hover {
+      background: #eee !important;
+      text-decoration: none;
   }

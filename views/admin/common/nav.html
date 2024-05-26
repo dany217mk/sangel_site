@@ -4,6 +4,7 @@
       <li><a href="<?= FULL_SITE_ROOT; ?>/admin_feedback"><span><i class="fa-solid fa-comments"></i></span><span>Обратная связь</span></a></li>
       <li><a href="<?= FULL_SITE_ROOT; ?>/reservations"><span><i class="fa-solid fa-cart-shopping"></i></span><span>Предзаказы</span></a></li>
       <? if ($this->getAdmin()['admin_level'] <= 2): ?>
+      <li><a href="<?= FULL_SITE_ROOT; ?>/reasons"><span><i class="fa-solid fa-circle-question"></i></span><span>Причины</span></a></li>
       <li><a href="<?= FULL_SITE_ROOT; ?>/products"><span><i class="fa-brands fa-product-hunt"></i></span><span>Продукты</span></a></li>
       <? endif; ?>
       <? if ($this->getAdmin()['admin_level'] == 1): ?>

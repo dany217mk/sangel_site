@@ -17,6 +17,8 @@
     define("SITE_STATUS", 'open');
     define("SITE_STATUS_CLOSE", '/sangel_site/report/technical');
     define("NO_SCRIPT_PAGE", '/sangel_site/no_scripts');
+    define('DATE_RELEASE', '31.05.2024');
+
     $db = array(
            'host' => 'localhost',
            'user' => 'root',

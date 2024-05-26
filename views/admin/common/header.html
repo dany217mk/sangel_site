@@ -1,8 +1,8 @@
 <header>
   <div>
     <div>
-      <img src="<?=IMG;?>/logo.png" alt="">
-      <h1>Sangel</h1>
+      <a href="<?= FULL_SITE_ROOT; ?>"><img src="<?=IMG;?>/logo.png" alt="">
+      <h1>Sangel</h1></a>
     </div>
     <? if (isset($this->admin)): ?>
     <div id="account" onclick="openAccountMenu()">
@@ -17,4 +17,3 @@
     <? endif; ?>
   </div>
 </header>
-  

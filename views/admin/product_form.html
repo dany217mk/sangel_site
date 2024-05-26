@@ -28,6 +28,10 @@
     <input type="text" class="text" name="product_price" value="<?= isset($product) ? $product['product_price']: ''; ?>">
   </div>
   <div>
+    <label>Показывать продукт на главной странице сайта? (1 - Да, 0 - Нет)</label>
+    <input type="number" class="text" name="product_show" value="<?= isset($product) ? $product['product_show']: ''; ?>">
+  </div>
+  <div>
     <label>Изображение</label>
     <input type="file" name="product_img" class="img" accept="image/png,image/jpg,image/jpeg,image/gif">
   </div>

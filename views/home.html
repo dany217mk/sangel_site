@@ -1,4 +1,211 @@
 <div id="cursor"></div>
 <main>
-  <h1>Hello World</h1>
+  <section id="banner">
+  <div class="container_banner">
+   <div class="row_banner">
+    <div class="col-md-6_banner">
+     <p class="promo-title">Не бойтесь одиночества - Sangel всегда с вами</p>
+      <div class="desc">
+       <p class="desc_p">Дарите девушкам красивые и безопасные украшения!<a class="main_a" href="auth">Оформить предзаказ</a></p>
+       <ul>
+         <li><a href="#spec">Специализации</a></li>
+         <li><a href="#possibility">Функциональность</a></li>
+         <li><a href="#review">Отзывы</a></li>
+         <li><a href="#services">Особенности</a></li>
+       </ul>
+      </div>
+     </div>
+    </div>
+  </div>
+ </section>
+
+
+<section id="about_us">
+      <div class="about">
+        <div class="about_img"></div>
+        <div class="team">
+          <h1>О нас</h1>
+          <p>От основания до сегодняшнего дня.</p>
+          <p>Sangel - это умное устройство, созданное, чтобы обеспечить вам чувство покоя и уверенности. Наша технология основана на передовых алгоритмах безопасности, которые позволяют нам своевременно информировать ближайших пользователей и простраивать безопасные маршруты. Sangel - это ваш надежный помощник, который поможет вам в любой ситуации. </p>
+          <div class="link_ab">
+						<a href="partner" class="learn">Наши продукты</a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+ <section id="spec">
+            <h1 class="title">Почему именно мы ?</h1>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <p>Мы разрабатываем алгоритмы для улучшения системы безопасности и облегчения быстрой коммуникации между пользователями. Наша цель - сделать мир более безопасным</p>
+                </div>
+                <div class="col-md-6 directions">
+                  <div>
+                    Безопасность
+                  </div>
+                  <div>
+                    Скорость оповещения
+                  </div>
+                  <div>
+                    Экстренные службы
+                  </div>
+                  <div>
+                    Всегда на связи
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="func">
+                <div class="container">
+                  <h1 class="title text-center">Особенности</h1>
+                  <div class="row">
+                    <div class="col-md-6 about-us">
+                      <p class="about-title">Функциональность - главное преимущество</p>
+                      <ul>
+                        <li><span>Построение кратчайших маршрутов</span></li>
+                        <li><span>Карта: пользователи, которые находятся в опасности, кто спешит на помощь, мои близкие</span></li>
+                        <li><span>Возможность добавления важных контактов, кому в первую очередь будет приходить уведомление</span></li>
+                        <li><span>Онлайн-ассистент с базой мужских голосов, который может дать нужный совет, в нужную секунду</span></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 func_img">
+                      <img src="./assets/img/heart.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section id="products">
+                <h1>Наши продукты</h1>
+                <p>Безопасность в ваших руках</p>
+                <div class="container">
+                  <div class="row">
+                    <? foreach($products as $item): ?>
+                    <div>
+                      <div class="block">
+                        <h3><?= $item['product_name'] ?></h3>
+                        <div><img src="<?= IMG_PRODUCT; ?>/<?= $item['product_img'] ?>" alt="кулон"></div>
+                        <strong><?= $item['product_price'] ?> ₽</strong>
+                      </div>
+                    </div>
+                    <? endforeach; ?>
+                  </div>
+                  <a href="#">Показать ещё</a>
+                </div>
+              </section>
+
+
+              <section id="review">
+                <h1 class="title">ЧТО ГОВОРЯТ пользователи </h1>
+                <div id="slider" class="slider">
+                <div class="slider-item">
+                  <div>
+                    <div>
+                      <div class="imgUser"> <img src="./assets/img/profile.png" alt=""></div> <div class="name-review">Елизавета Василенко</div>
+                  </div>
+                  <div class="review">
+                    <h3>Отзыв</h3>
+                    <span class="post">Project manager «Башни Политех» и федерального эксперта Росмолодежь. гранты. </span>
+                    <p class="txt">SANGEL — это действительно инновационный проект, который сочетает в себе функции защиты, обучения самообороне и восстановления ментального здоровья. Приложение и умный кулон стали незаменимыми помощниками для меня и моей семьи.
+Первое, что меня поразило, это уровень безопасности, который обеспечивает SANGEL. Кулон мгновенно реагирует на опасные ситуации и отправляет сигнал тревоги моим близким и пользователям, находящимся в радиусе действия. Это позволяет мне чувствовать себя увереннее и знать, что в случае необходимости помощь придёт быстро.
+В целом, SANGEL — это отличный проект, который делает нашу жизнь безопаснее и помогает нам справляться с трудностями. Рекомендую всем, кто хочет обеспечить свою безопасность и благополучие.</p>
+                    <div class="mark">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="date">18.03.2024</p>
+                  </div>
+                </div>
+                </div>
+                <div class="slider-item">
+                  <div>
+                    <div>
+                      <div class="imgUser"> <img src="./assets/img/profile.png" alt=""></div> <div class="name-review">Анастасия Роговенко</div>
+                  </div>
+                  <div class="review">
+                    <h3>Отзыв</h3>
+                    <span class="post">Региональный координатор ВОД «Волонтеры-медики» в Санкт-Петербурге, представитель главы администрации Приморского района по делам молодёжи</span>
+                    <p class="txt">
+                      Я просто в восторге от приложения и умного кулона SANGEL! Этот проект не только обеспечивает защиту в опасных ситуациях, но и помогает научиться самообороне и восстановить ментальное здоровье после стрессовых ситуаций.
+
+            Я использовала приложение SANGEL вместе с кулоном и осталась очень довольна. Он был моим надежным компаньоном в поездках, вечерних пробежках и просто в повседневной жизни. Мне очень понравилась возможность быстро вызвать помощь в случае чего, а также получить советы по самообороне.
+
+            Большой плюс SANGEL - это его удобство использования и простота настройки. Я чувствовала себя намного увереннее, зная, что у меня всегда под рукой такой надежный помощник.
+
+            В общем, я бы рекомендовала SANGEL всем, кто ценит свою безопасность и хочет быть готовым к любым ситуациям. Этот проект действительно стоит своих денег и поможет вам по-настоящему почувствовать себя защищенным.
+          навигацией и связью между участниками образовательного процесса.
+           </p>
+                    <div class="mark">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="date">15.03.2024</p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <div class="btns">
+              <button type="button" id="prev" disabled name="button">Предыдущий</button>
+              <button type="button" id="next" name="button">Следующий</button>
+            </div>
+            <div class="btns-item" id="btns-item">
+
+            </div>
+              </section>
+
+
+
+  <section id="reservations">
+    <div class="row">
+      <div class="col-md-6 res_img">
+          <img src="<?= IMG; ?>/header_img.png" alt="">
+      </div>
+      <div class="col-md-6 wrapper">
+      <h2>Оформить предзаказ</h2>
+      <form action="#">
+        <div class="dbl-field">
+          <div class="field">
+            <input type="text" name="name" placeholder="Фио">
+            <i class='fas fa-user'></i>
+          </div>
+          <div class="field">
+            <input type="text" name="email" placeholder="Email">
+            <i class='fas fa-envelope'></i>
+          </div>
+        </div>
+        <div class="dbl-field">
+          <div class="field">
+            <select name="products">
+              <option value="0">Выберите товар</option>
+              <? foreach($products_reservations as $item): ?>
+              <option value="<?= $item['product_id'] ?>"><?= $item['product_name'] ?></option>
+              <? endforeach; ?>
+            </select>
+          </div>
+        <div class="button-area">
+          <button type="submit">Send Message</button>
+          <span></span>
+        </div>
+      </form>
+    </div>
+    <div class="wait">
+            <p>Мы свяжемся с вами по электронной почте в течении 7 рабочих дней. Выражаем Вам искреннюю благодарность за оказанное доверие и выбор нашей компании.</p> <img src="<?= IMG; ?>/preload.gif" width="20" height="20" alt="">
+        </div>
+
+    </div>
+  </section>
+
+
 </main>

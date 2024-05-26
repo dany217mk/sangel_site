@@ -42,3 +42,9 @@ function report(str, time=4000){
     div.remove();
     }, time+200);
 }
+
+window.addEventListener("scroll", function(){
+  var header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 0);
+}
+);

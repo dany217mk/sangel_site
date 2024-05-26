@@ -150,8 +150,9 @@ header > div{
 	justify-content: space-between;
 	align-items: center;
 }
-header > div > div:nth-child(1){
+header > div > div:nth-child(1) a{
 	display: flex;
+	text-decoration: none;
 	align-items: center;
 	justify-content: center;
 }

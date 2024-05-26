@@ -9,12 +9,15 @@ class MainController extends Controller
       header("Location: " . FULL_SITE_ROOT . "/report/noexist");
       die();
     }
+    $productModel = new Product();
+    $products = $productModel->getShowAll();
+    $products_reservations = $productModel->getShowReservationsAll();
     $styles = [CSS . '/home.css'];
-    $scripts = [JS . '/home.js'];
+    $scripts = [JS . '/home.js', JS . '/slider.js'];
     $title = SERVER_NAME;
     $this->helper->outputCommonHead($title, $styles);
     require_once  './views/home.html';
-    $this->helper->outputCommonFoot();
+    $this->helper->outputCommonFoot($scripts);
   }
 
   public function actionReport($data){
@@ -34,6 +37,16 @@ class MainController extends Controller
     $this->helper->outputCommonFoot($scripts);
   }
 
+  public function actionContact(){
+    $title = "Обратная связь";
+    $reasonModel = new Reason();
+    $reasons = $reasonModel->getShowAll();
+    $styles = [CSS . '/contact.css'];
+    $scripts = [JS . '/contact.js'];
+    $this->helper->outputCommonHead($title, $styles);
+    require_once  './views/contact.html';
+    $this->helper->outputCommonFoot($scripts);
+  }
 
 
 }

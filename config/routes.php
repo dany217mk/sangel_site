@@ -7,6 +7,12 @@ $routes = array(
     'admin/delete' => 'delete',
     'logout' => 'logout',
   ),
+  'ReasonController' => array(
+    'reasons' => 'index',
+    'reason/add' => 'add',
+    'reason/edit/([0-9]+)' => 'edit/$1',
+    'reason/delete' => 'delete',
+  ),
   'FeedbackController' => array(
     'admin_feedback' => 'index',
     'feedback/edit/([0-9]+)' => 'edit/$1',
@@ -26,6 +32,7 @@ $routes = array(
   'MainController' => array(
       'report/([a-z]+)' => 'report/$1',
       'privacy' => 'privacy',
+      'contact' => 'contact',
       '' => 'index'
     )
 );

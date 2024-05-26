@@ -95,3 +95,18 @@
   .linkNav ul li button.active{
     border-color: #dee2e6 #dee2e6 #fff;
   }
+  #main{
+    margin-top: 60px;
+  }
+header{
+  background: var(--main5) !important;
+}
+header.sticky{
+  background: #fff !important;
+}
+footer{
+  background: var(--main5) !important;
+}
+.copyrightText{
+  background: black !important;
+}

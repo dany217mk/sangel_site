@@ -1,0 +1,220 @@
+footer{
+  background: var(--main5) !important;
+}
+.copyrightText{
+  background: black !important;
+}
+#reservation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main);
+  min-height: 100vh;
+  position: relative;
+}
+#reservation::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--main2);
+}
+#reservation .container{
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+}
+#reservation .container .contactInfo{
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background: var(--main);
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15)
+}
+#reservation .container .contactForm{
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25)
+}
+#reservation .container .contactInfo h2{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500
+}
+#reservation .container .contactInfo p{
+  color: #f2e9e9;
+  font-size: 16px;
+  margin: 20px auto;
+}
+#reservation .container .contactInfo ul.contact_list{
+  position: relative;
+  margin: 20px 0;
+}
+#reservation .container .contactInfo ul.contact_list li{
+  list-style: none;
+}
+#reservation .container .contactInfo ul.contact_list li a{
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: flex-start;
+}
+#reservation .container .contactInfo ul.contact_list li span:nth-child(1){
+  width: 30px;
+  min-width: 30px;
+}
+#reservation .container .contactInfo ul.contact_list li span:nth-child(1) i{
+  color: #fff;
+  max-width: 100%;
+}
+#reservation .container .contactInfo ul.contact_list li span:nth-child(2){
+  color: #fff;
+  font-weight: 300;
+}
+#reservation .sci li a{
+  background: var(--main2);
+}
+#reservation .contactForm h2{
+  color: #0f3959;
+  font-size: 24px;
+  font-weight: 500;
+}
+#reservation .contactForm form{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+#reservation .contactForm form .inputBox{
+  position: relative;
+  margin-bottom: 35px;
+}
+#reservation .contactForm form .inputBox.w50{
+  width: 47%;
+}
+#reservation .contactForm form .inputBox.w100{
+  width: 100%;
+}
+#reservation .contactForm form input, #reservation .contactForm form textarea{
+  width: 100%;
+  resize: none;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  padding: 5px 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid #777;
+  background: none;
+  border-radius: 0;
+}
+#reservation .contactForm form select{
+  resize: none;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  padding: 5px 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid #777;
+  background: none;
+  border-radius: 0;
+  margin-bottom: 30px;
+}
+#reservation .contactForm form textarea{
+  height: 120px;
+}
+#reservation .contactForm form .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+#reservation .contactForm form input:focus ~ span, #reservation .contactForm form textarea:focus ~ span,
+#reservation .contactForm form input:valid ~ span, #reservation .contactForm form textarea:valid ~ span{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #095a55;
+    font-weight: 500;
+}
+#reservation .contactForm form input[type="submit"]{
+  position: relative;
+  cursor: pointer;
+  background: #095a55;
+  color: #fff;
+  border: none;
+  max-width: 150px;
+  padding: 12px;
+}
+#reservation .contactForm form input[type="submit"]:hover{
+  background: #0d948b;
+}
+.rating-area {
+	overflow: hidden;
+  display: none;
+	width: 265px;
+	margin: 0 auto;
+}
+.rating-area.active {
+  display: block;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 42px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 32px;
+	line-height: 32px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+	pos

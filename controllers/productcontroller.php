@@ -13,7 +13,7 @@ class ProductController extends Controller
     $data = $this->productModel->getAll();
     $styles = [];
     $headers = array(
-        'ID', 'Наименование', 'Описание', 'Фото', 'Открыт ли предзаказ на товар?', 'Цена товара',
+        'ID', 'Наименование', 'Описание', 'Фото', 'Открыт ли предзаказ на товар?', 'Цена товара', 'Показывать ли продукт на главной странице'
     );
     $type = "product";
     require_once   './views/admin/common/head.html';
@@ -81,7 +81,8 @@ class ProductController extends Controller
         $desc = $_POST['product_description'];
         $access = $_POST['product_reservetion_access'];
         $price = $_POST['product_price'];
-        $this->productModel->add($name, $desc, $access, $price, $filename);
+        $show = $_POST['product_show'];
+        $this->productModel->add($name, $desc, $access, $price, $show, $filename);
         header("Location: " . FULL_SITE_ROOT . "/products");
       }
         $title = 'Добавление продукта';
@@ -152,7 +153,8 @@ class ProductController extends Controller
                  $desc = $_POST['product_description'];
                  $access = $_POST['product_reservetion_access'];
                  $price = $_POST['product_price'];
-                 $this->productModel->update($name, $desc, $access, $price, $filename, $id);
+                 $show = $_POST['product_show'];
+                 $this->productModel->update($name, $desc, $access, $price, $show, $filename, $id);
                  header("Location: " . FULL_SITE_ROOT . "/products");
                }
              }

@@ -1,0 +1,21 @@
+<main>
+  <div class="clm">
+  <div>
+    <div class="linkBack">
+        <a href="<?=FULL_SITE_ROOT?>/reasons"><i class="fa-solid fa-arrow-left"></i>назад</a>
+      </div><h2>Изменение таблицы причина обращения</h2>
+</div>
+<? if (!empty($errors)): ?>
+        <? foreach ($errors as $error): ?>
+            <div class="alert alert-danger text-center alert-reg"><?= $error; ?></div>
+        <? endforeach; ?>
+<? endif; ?>
+<form method="post" enctype="multipart/form-data">
+  <div>
+    <label>Наименование</label>
+    <input type="text" class="text" name="reason_name" value="<?= isset($reason) ? $reason['reason_name']: ''; ?>">
+  </div>
+    <input type="submit" class="save" value="Сохранить">
+</form>
+</div>
+</main>
