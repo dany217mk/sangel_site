@@ -47,6 +47,17 @@ class MainController extends Controller
     $this->helper->outputCommonFoot($scripts);
   }
 
+  public function actionQuestions(){
+    $title = 'FAQ';
+    $styles = [CSS . '/faq.css'];
+    $scripts = [JS . '/faq.js'];
+    $questionModel = new Question();
+    $questions = $questionModel->getShowAll();
+    $this->helper->outputCommonHead($title, $styles);
+    require_once  './views/faq.html';
+    $this->helper->outputCommonFoot($scripts);
+  }
+
   public function actionContact(){
     if (isset($_POST['fio'])) {
       $fio = $this->helper->escape_srting($_POST['fio']);

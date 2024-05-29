@@ -1,0 +1,65 @@
+body main{
+  min-height: 65vh;
+}
+#main{
+  margin-top: 60px;
+}
+header > div > div:nth-child(2) a {
+    color: var(--font) !important;
+}
+header > div > div:nth-child(1) a b {
+    color: #434343 !important;
+    text-shadow: 0 0 4px #fff !important;
+}
+footer{
+  background: var(--main5) !important;
+}
+.copyrightText{
+  background: black !important;
+}
+header > div > div:nth-child(2) a:hover, header > div > div:nth-child(2) button:hover {
+    background: #eee !important;
+    text-decoration: none;
+}
+.block{
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 15px;
+  box-shadow: 1px 2px 12px 0 rgba(53,0,132,.12);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.faq_block{
+  border: 1px solid #ccc;
+  width: 80%;
+  margin: 20px auto;
+}
+.faq_block > div{
+  border-bottom: 1px solid #ccc;
+}
+.faq_block div div{
+  padding: 1rem;
+}
+.faq_block div div:nth-child(2n){
+  display: none;
+}
+.faq_block div div:nth-child(2n).active{
+  display: block;
+}
+.faq_block div div:nth-child(2n+1).active span i::before{
+  content: "\f107";
+}
+.faq_block div div:nth-child(2n+1){
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.faq_block div div:nth-child(2n+1):hover{
+  background: #eee;
+}
+.faq_block div div:nth-child(2n+1) span{
+  font-weight: bold;
+  font-size: 24px;
+}

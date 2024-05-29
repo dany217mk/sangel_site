@@ -1,0 +1,25 @@
+<main>
+  <div class="clm">
+  <div>
+    <div class="linkBack">
+        <a href="<?=FULL_SITE_ROOT?>/questions"><i class="fa-solid fa-arrow-left"></i>назад</a>
+      </div><h2>Изменение таблицы FAQ</h2>
+</div>
+<? if (!empty($errors)): ?>
+        <? foreach ($errors as $error): ?>
+            <div class="alert alert-danger text-center alert-reg"><?= $error; ?></div>
+        <? endforeach; ?>
+<? endif; ?>
+<form method="post" enctype="multipart/form-data">
+  <div>
+    <label>Вопрос</label>
+    <textarea rows="8" name="question_text"><?= isset($question) ? $question['question_text']: ''; ?></textarea>
+  </div>
+  <div>
+    <label>Ответ</label>
+    <textarea rows="8" name="question_answer"><?= isset($question) ? $question['question_answer']: ''; ?></textarea>
+  </div>
+    <input type="submit" class="save" value="Сохранить">
+</form>
+</div>
+</main>

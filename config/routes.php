@@ -13,6 +13,12 @@ $routes = array(
     'reason/edit/([0-9]+)' => 'edit/$1',
     'reason/delete' => 'delete',
   ),
+  'QuestionController' => array(
+    'admin_questions' => 'index',
+    'question/add' => 'add',
+    'question/edit/([0-9]+)' => 'edit/$1',
+    'question/delete' => 'delete',
+  ),
   'FeedbackController' => array(
     'admin_feedback' => 'index',
     'feedback/edit/([0-9]+)' => 'edit/$1',
@@ -33,6 +39,7 @@ $routes = array(
       'report/([a-z]+)' => 'report/$1',
       'privacy' => 'privacy',
       'contact' => 'contact',
+      'faq' => 'questions',
       '' => 'index'
     )
 );

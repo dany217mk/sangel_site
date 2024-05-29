@@ -1,0 +1,15 @@
+<main id="main">
+    <div class="clm">
+        <div class="block">
+          <h1>Часто задаваемые вопросы</h1>
+          <div class="faq_block">
+            <? foreach($questions as $item): ?>
+            <div>
+              <div id="question<?= $item['question_id']; ?>" onclick="show_answer(<?= $item['question_id']; ?>)"><span><?= $item['question_text']; ?></span><span><i class="fa-solid fa-angle-right"></i></span></div>
+              <div id="answer<?= $item['question_id']; ?>" onclick="show_answer(<?= $item['question_id']; ?>)"><span><?= $item['question_answer']; ?></span><span></span></div>
+            </div>
+            <? endforeach; ?>
+          </div>
+        </div>
+      </div>
+</main>
