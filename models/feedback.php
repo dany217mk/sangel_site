@@ -1,4 +1,4 @@
-<?php 
+<?php
 class Feedback extends Model {
 public function getAll()
 {
@@ -9,6 +9,15 @@ public function getAll()
             LEFT JOIN `admins` ON `readit_admin_id` = `admin_id`
             GROUP BY  `feedback_id`;";
     return parent::returnAllNum($query);
+}
+public function add($fio, $email, $reason, $text, $rating){
+  if ($rating != -1) {
+    $query = "INSERT INTO `feedback` (`feedback_fio`, `feedback_email`, `feedback_reason_id`, `feedback_text`, `feedback_mark`) VALUES ('$fio', '$email', '$reason', '$text', '$rating');";
+  } else {
+    $query = "INSERT INTO `feedback` (`feedback_fio`, `feedback_email`, `feedback_reason_id`, `feedback_text`, `feedback_mark`) VALUES ('$fio', '$email', '$reason', '$text', NULL);";
+  }
+
+  parent::actionQuery($query);
 }
 public function delete($id){
     $query = "

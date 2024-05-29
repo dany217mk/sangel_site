@@ -6,12 +6,12 @@
     <div class="col-md-6_banner">
      <p class="promo-title">Не бойтесь одиночества - Sangel всегда с вами</p>
       <div class="desc">
-       <p class="desc_p">Дарите девушкам красивые и безопасные украшения!<a class="main_a" href="auth">Оформить предзаказ</a></p>
+       <p class="desc_p">Дарите девушкам красивые и безопасные украшения!<a class="main_a" href="#reservations">Оформить предзаказ</a></p>
        <ul>
          <li><a href="#spec">Специализации</a></li>
-         <li><a href="#possibility">Функциональность</a></li>
+         <li><a href="#func">Функциональность</a></li>
+         <li><a href="#products">Продукты</a></li>
          <li><a href="#review">Отзывы</a></li>
-         <li><a href="#services">Особенности</a></li>
        </ul>
       </div>
      </div>
@@ -28,7 +28,7 @@
           <p>От основания до сегодняшнего дня.</p>
           <p>Sangel - это умное устройство, созданное, чтобы обеспечить вам чувство покоя и уверенности. Наша технология основана на передовых алгоритмах безопасности, которые позволяют нам своевременно информировать ближайших пользователей и простраивать безопасные маршруты. Sangel - это ваш надежный помощник, который поможет вам в любой ситуации. </p>
           <div class="link_ab">
-						<a href="partner" class="learn">Наши продукты</a>
+						<a href="#products" class="learn">Наши продукты</a>
         </div>
         </div>
       </div>
@@ -88,13 +88,24 @@
                     <div>
                       <div class="block">
                         <h3><?= $item['product_name'] ?></h3>
-                        <div><img src="<?= IMG_PRODUCT; ?>/<?= $item['product_img'] ?>" alt="кулон"></div>
-                        <strong><?= $item['product_price'] ?> ₽</strong>
+                        <div class="block_product_img"><img src="<?= IMG_PRODUCT; ?>/<?= $item['product_img'] ?>" alt="кулон"></div>
+                        <div class="block_info">
+                          <strong><?= $item['product_price'] ?> ₽</strong>
+                          <? if ($item['product_reservetion_access'] == 1): ?>
+                          <div>
+                            <input type="checkbox" checked disabled >
+                            <span>Доступно к продаже</span>
+                          </div>
+                          <? else: ?>
+                          <input type="checkbox" disabled>
+                          <? endif; ?>
+                        </div>
+
                       </div>
                     </div>
                     <? endforeach; ?>
                   </div>
-                  <a href="#">Показать ещё</a>
+                  <a href="#reservations">Оформить предзаказ</a>
                 </div>
               </section>
 
@@ -174,20 +185,20 @@
       </div>
       <div class="col-md-6 wrapper">
       <h2>Оформить предзаказ</h2>
-      <form action="#">
+      <form id="form-res" method="post">
         <div class="dbl-field">
           <div class="field">
-            <input type="text" name="name" placeholder="Фио">
+            <input type="text" name="fio" id="fio" placeholder="Фио">
             <i class='fas fa-user'></i>
           </div>
           <div class="field">
-            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="email" id="email" placeholder="Email">
             <i class='fas fa-envelope'></i>
           </div>
         </div>
         <div class="dbl-field">
           <div class="field">
-            <select name="products">
+            <select name="form_products" id="form_products">
               <option value="0">Выберите товар</option>
               <? foreach($products_reservations as $item): ?>
               <option value="<?= $item['product_id'] ?>"><?= $item['product_name'] ?></option>
@@ -195,15 +206,15 @@
             </select>
           </div>
         <div class="button-area">
-          <button type="submit">Send Message</button>
-          <span></span>
+          <button type="submit">Оформить</button>
+
         </div>
       </form>
     </div>
+    <p class="agree">Нажимая кнопку Оформить, вы принимаете <a href="<?= FULL_SITE_ROOT; ?>/privacy">Условия, Политику использования данных и Политику в отношении файлов cookie.</a></p>
     <div class="wait">
             <p>Мы свяжемся с вами по электронной почте в течении 7 рабочих дней. Выражаем Вам искреннюю благодарность за оказанное доверие и выбор нашей компании.</p> <img src="<?= IMG; ?>/preload.gif" width="20" height="20" alt="">
         </div>
-
     </div>
   </section>
 

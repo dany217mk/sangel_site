@@ -11,7 +11,7 @@ class ReservationController extends Controller
     $styles = [CSS . '/reservations.css'];
     $data = $this->reservationModel->getAll();
     $headers = array(
-        'ID', 'ФИО', 'Email', 'Наименование продукта', 'Обработано',
+        'ID', 'ФИО', 'Email', 'Наименование продукта', 'В работе',
     );
     $type = "reservation";
     require_once   './views/admin/common/head.html';

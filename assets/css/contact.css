@@ -106,7 +106,14 @@ footer{
 }
 #reservation .contactForm form .inputBox{
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
+}
+#reservation .contactForm form .subBox{
+  margin-bottom: 10px;
+}
+#reservation .contactForm form .selectBox{
+  position: relative;
+  margin-bottom: 15px;
 }
 #reservation .contactForm form .inputBox.w50{
   width: 47%;
@@ -140,7 +147,7 @@ footer{
   border-bottom: 1px solid #777;
   background: none;
   border-radius: 0;
-  margin-bottom: 30px;
+  margin-bottom: 2px;
 }
 #reservation .contactForm form textarea{
   height: 120px;
@@ -155,7 +162,7 @@ footer{
   transition: 0.3s;
 }
 #reservation .contactForm form input:focus ~ span, #reservation .contactForm form textarea:focus ~ span,
-#reservation .contactForm form input:valid ~ span, #reservation .contactForm form textarea:valid ~ span{
+#reservation .contactForm form input.valid ~ span, #reservation .contactForm form textarea.valid ~ span{
     transform: translateY(-20px);
     font-size: 12px;
     font-weight: 400;
@@ -216,5 +223,17 @@ footer{
 	color: gold;
 	text-shadow: 1px 1px goldenrod;
 }
-.rate-area > label:active {
-	pos
+.agree {
+    text-align: center;
+    color: #777;
+    font-size: 11px;
+}
+.error {
+    font-size: 14px;
+    color: red;
+    line-height: 16px;
+    margin: 2px 0;
+    text-align: left;
+    padding-left: 5px;
+    text-shadow: 1px 1px 0 rgb(255 255 255);
+}

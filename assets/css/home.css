@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 #banner{
     background-image: url(../img/banner2.png);
     background-attachment: fixed;
@@ -11,7 +14,7 @@
 }
 .promo-title{
     font-size: 75px;
-    font-family: 'BaronNeue';
+    font-family: inherit;
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 15px;
@@ -407,11 +410,27 @@
 #products .block img{
   width: 90%;
 }
-#products .block > div{
+#products .block > div.block_product_img{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#products .block > div.block_info{
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+#products .block > div.block_info div{
+  width: auto;
+  margin: 0;
+  font-size: 14px;
+  color: #6c6c6c;
+  text-shadow: 0 0 1px #fffefe;
+}
+#products .block > div.block_info input{
+  margin-right: 3px;
 }
 #products .block h3{
   margin-bottom: 10px;
@@ -425,7 +444,7 @@
 }
 #products .container > a{
   display: block;
-    width: 200px;
+    width: 260px;
     margin: auto;
     margin-top: 40px;
     text-align: center;
@@ -613,6 +632,7 @@
 }
 .wrapper form{
   margin: 35px 30px;
+    margin-bottom: 0px;
 }
 .wrapper form.disabled{
   pointer-events: none;
@@ -647,6 +667,10 @@ form .message textarea{
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+form .field .errorInput{
+  border-color: red;
+  background: #ffe2e9;
 }
 .field input::placeholder,
 .message textarea::placeholder{
@@ -719,4 +743,9 @@ form .button-area{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.agree{
+  text-align: center;
+  color: #777;
+  font-size: 11px;
 }

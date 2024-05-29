@@ -23,23 +23,25 @@
       </div>
       <div class="contactForm">
         <h2>Связаться с нами</h2>
-        <form class="formBox">
+        <form class="formBox" id="form-feedback" method="post">
           <div class="inputBox w50">
-            <input type="text" required name="fio">
+            <input type="text" name="fio" id="fio">
             <span>ФИО</span>
+            <div class="error" id="error-fio"></div>
           </div>
           <div class="inputBox w50">
-            <input type="text" required name="email">
+            <input type="text" name="email" id="email">
             <span>Email</span>
+            <div class="error" id="error-email"></div>
           </div>
           <div class="selectBox w50">
-            <select onchange="open_rating_block()" id="select_reason" name="reason">
+            <select id="select_reason" name="reason">
               <option value="0">Причина обращения</option>
-
               <? foreach($reasons as $item): ?>
               <option value="<?= $item['reason_id'] ?>"><?= $item['reason_name'] ?></option>
               <? endforeach; ?>
             </select>
+            <div class="error" id="error-reason"></div>
           </div>
           <div class="rating-area w50" id="rating-area">
           	<input type="radio" id="star-5" name="rating" value="5">
@@ -54,12 +56,14 @@
           	<label for="star-1" title="Оценка «1»"></label>
           </div>
           <div class="inputBox w100">
-            <textarea name="text" required></textarea>
-            <span>Write your message here...</span>
+            <textarea name="text" id="text"></textarea>
+            <span>Напишите ваше сообщения здесь...</span>
+            <div class="error" id="error-text"></div>
           </div>
-          <div class="inputBox w100">
-            <input type="submit" class="send_btn" value="Send">
+          <div class="inputBox w100 subBox">
+            <input type="submit" class="send_btn" value="Отправить">
           </div>
+          <p class="agree">Нажимая кнопку Отправить, вы принимаете <a href="<?= FULL_SITE_ROOT; ?>/privacy">Условия, Политику использования данных и Политику в отношении файлов cookie.</a></p>
         </form>
       </div>
     </div>

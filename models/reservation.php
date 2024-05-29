@@ -10,6 +10,12 @@ public function getAll()
             GROUP BY  `reservation_id`;";
     return parent::returnAllNum($query);
 }
+
+public function add($fio, $email, $product_id){
+  $query = "INSERT INTO `reservations` (`reservation_fio`, `reservation_email`, `reservation_product_id`) VALUES ('$fio', '$email', '$product_id');";
+  parent::actionQuery($query);
+}
+
 public function delete($id){
     $query = "
         DELETE FROM `reservations` WHERE `reservation_id` = $id;

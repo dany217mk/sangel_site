@@ -7,7 +7,7 @@ class Product extends Model{
     }
     public function getShowAll()
       {
-          $query = "SELECT `product_name`, `product_img`, `product_price` FROM `products` WHERE `product_show` = '1' LIMIT 6;";
+          $query = "SELECT `product_name`, `product_img`, `product_price`, `product_reservetion_access` FROM `products` WHERE `product_show` = '1' LIMIT 6;";
           return parent::returnAllAssoc($query);
       }
 
