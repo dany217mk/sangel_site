@@ -404,3 +404,22 @@ footer {
 		  .report.darker{
 		    opacity: 0;
 		  }
+
+@media (max-width: 1170px) {
+header {
+	padding-right: 5px;
+}
+header > div > div:nth-child(2) {
+	margin-right: 0;
+}
+}
+@media (max-width: 1020px) {
+	header {
+	    padding-left: 5px;
+	}
+	.container-footer{
+  display: flex;
+  flex-direction: column;
+	padding: 50px 10px;
+}
+}

@@ -8,7 +8,7 @@ class QuestionController extends Controller
   }
   public function actionIndex(){
     $title = 'FAQ';
-    $styles = [CSS . '/questions.css'];
+    $styles = [];
     $data = $this->questionModel->getAll();
     $headers = array(
         'ID', 'Текст вопроса', 'Ответ'

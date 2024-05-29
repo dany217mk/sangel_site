@@ -361,3 +361,59 @@ main td img{
   display: block;
   transition: all 0.3s ease;
 }
+nav h3{
+	padding-left: 5px;
+}
+footer {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu{
+	display: none;
+}
+@media (max-width: 1230px)
+{
+	#menu:hover{
+		transition: all 0.3s ease;
+		border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+		border-style: solid;
+		box-shadow: 0 0 0 1px #cbd6ee;
+	}
+nav{
+	position: fixed;
+	top: 0;
+	left: -100%;
+	bottom: 0;
+}
+nav.active{
+	left: 0;
+}
+header > div {
+    width: 95%;
+	}
+	main > .clm {
+    margin-left: 5px;
+    margin-top: 50px;
+    margin-right: 5px;
+}
+main > .clm {
+	width: 100%;
+	padding: 5px;
+}
+header > div > div:nth-child(1) {
+	display: flex;
+	align-items: center;
+}
+.menu{
+	display: block;
+	margin: 0 15px;
+	font-size: 18px;
+	background: #eee;
+	padding: 0.2rem 0.8rem;
+}
+}

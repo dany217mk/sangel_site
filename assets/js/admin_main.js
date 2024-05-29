@@ -42,23 +42,38 @@ function report(str, time=4000){
     div.remove();
     }, time+200);
 }
+
+function openMenu(){
+  document.getElementById('nav').classList.toggle('active');
+}
+
+
+
+
 function openAccountMenu() {
   document.getElementById('account-menu').classList.toggle('active');
 }
+
 let html = document.querySelector('html');
 html.addEventListener('click', function(event) {
  let target = event.target;
  let boolAccount = false;
+ let boolNav = false;
  try {
    while (target.tagName != 'HTML'){
      if (target.id == 'account-menu' || target.id == 'account'){
        boolAccount = true;
-       break;
+     }
+     if (target.id == 'nav' || target.id == 'menu') {
+       boolNav = true
      }
      target = target.parentNode;
    }
  } catch (e) {}
  if (!boolAccount && typeof boolHomePage == 'undefined'){
    document.getElementById('account-menu').classList.remove('active');
+ }
+ if (!boolNav){
+   document.getElementById('nav').classList.remove('active');
  }
 });

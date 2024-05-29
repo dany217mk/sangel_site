@@ -110,3 +110,21 @@ footer{
 .copyrightText{
   background: black !important;
 }
+  @media (max-width: 1020px) {
+.linkNav ul {
+		border-bottom: none;
+	}
+	.linkNav ul li button {
+		display: block;
+		width: 100%;
+		border-radius: .25rem;
+	  border-color: #dee2e6;
+		margin-bottom: 10px;
+	}
+	.linkNav ul li {
+		width: 100%;
+	}
+  main #block1, main #block2 {
+    width: 95%;
+  }
+}

@@ -97,3 +97,18 @@ body{
     width: auto;
     border-radius: 0;
   }
+  @media (max-width: 600px)
+  {
+  body > .main {
+    width: 95%;
+  }
+  body > .main input[type="text"],   body > .main input[type="password"]{
+      width: 95%;
+    }
+    .body > div {
+      width: 97%;
+    }
+    body > .main {
+      border-radius: 0;
+    }
+}

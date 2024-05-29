@@ -8,7 +8,7 @@ class ReasonController extends Controller
   }
   public function actionIndex(){
     $title = 'Причины обращения';
-    $styles = [CSS . '/reasons.css'];
+    $styles = [];
     $data = $this->reasonModel->getAll();
     $headers = array(
         'ID', 'Причина обращения'

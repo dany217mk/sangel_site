@@ -11,7 +11,7 @@ class ProductController extends Controller
   public function actionIndex(){
     $title = 'Продукты';
     $data = $this->productModel->getAll();
-    $styles = [];
+    $styles = [CSS . '/admin_table.css'];
     $headers = array(
         'ID', 'Наименование', 'Описание', 'Фото', 'Открыт ли предзаказ на товар?', 'Цена товара', 'Показывать ли продукт на главной странице'
     );

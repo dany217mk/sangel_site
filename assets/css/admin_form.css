@@ -92,3 +92,17 @@ form th{
 .linkBack a i{
   padding-right: 10px;
 }
+@media (max-width: 1230px)
+{
+  form input.text{
+    width: 95%;
+    min-width: auto;
+  }
+  form textarea{
+    width: 95%;
+    min-width: auto;
+  }
+  main form{
+    margin-left: 0;
+  }
+}

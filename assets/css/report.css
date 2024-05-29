@@ -94,3 +94,15 @@ body main{
       background: #eee !important;
       text-decoration: none;
   }
+  @media (max-width: 1020px) {
+  .clm{
+    width: 95%;
+    margin: 0 auto !important;
+  }
+  .report_menu{
+    display: none;
+  }
+  .note img{
+    width: 100%;
+  }
+  }

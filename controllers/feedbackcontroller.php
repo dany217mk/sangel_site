@@ -9,10 +9,10 @@ class FeedbackController extends Controller
   }
   public function actionIndex(){
     $title = 'Обратная связь';
-    $styles = [CSS . '/feedback.css'];
+    $styles = [CSS . '/admin_table.css'];
     $data = $this->feedbackModel->getAll();
     $headers = array(
-        'ID', 'ФИО', 'Email', 'Text', 'Причина обращения', 'Оценка (отзыв)', 'Обработано', 
+        'ID', 'ФИО', 'Email', 'Text', 'Причина обращения', 'Оценка (отзыв)', 'Обработано',
     );
     $type = "feedback";
     require_once   './views/admin/common/head.html';

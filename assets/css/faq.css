@@ -63,3 +63,15 @@ header > div > div:nth-child(2) a:hover, header > div > div:nth-child(2) button:
   font-weight: bold;
   font-size: 24px;
 }
+@media (max-width: 1020px) {
+.faq_block{
+  width: 100%;
+}
+.block {
+    width: 95%;
+    border-radius: 0;
+  }
+  .block h1{
+    text-align: center;
+  }
+}

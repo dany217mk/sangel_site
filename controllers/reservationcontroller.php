@@ -8,7 +8,7 @@ class ReservationController extends Controller
   }
   public function actionIndex(){
     $title = 'Предзаказы';
-    $styles = [CSS . '/reservations.css'];
+    $styles = [CSS . '/admin_table.css'];
     $data = $this->reservationModel->getAll();
     $headers = array(
         'ID', 'ФИО', 'Email', 'Наименование продукта', 'В работе',
