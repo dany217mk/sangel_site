@@ -1,2 +1,4 @@
 config/contstans.php
 assets/libs
+composer.lock
+/vendor
