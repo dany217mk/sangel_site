@@ -77,7 +77,7 @@ document.getElementById('form-feedback').onsubmit = function(){
       counter++;
     }
     if (select_reason.value == 2 && text.value.trim() == "" && this.rating.value.trim() === "") {
-      report("Поставьте оценку или напиште текст отзыва");
+      report("Поставьте оценку или напишите текст отзыва");
     } else {
       counter++;
     }

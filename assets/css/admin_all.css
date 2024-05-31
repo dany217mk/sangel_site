@@ -400,14 +400,11 @@ nav.active{
 header > div {
     width: 95%;
 	}
-	main > .clm {
-    margin-left: 5px;
-    margin-top: 50px;
-    margin-right: 5px;
-}
 main > .clm {
-	width: 100%;
+	width: 95%;
 	padding: 5px;
+	margin: 0 auto;
+	margin-top: 50px;
 }
 header > div > div:nth-child(1) {
 	display: flex;
@@ -419,5 +416,21 @@ header > div > div:nth-child(1) {
 	font-size: 18px;
 	background: #eee;
 	padding: 0.2rem 0.8rem;
+}
+}
+@media (max-width: 900px){
+	main form > div {
+    flex-direction: column;
+	}
+	form input.text {
+    width: 90%;
+	}
+	form label {
+    margin-bottom: 10px;
+}
+}
+@media (max-width: 550px){
+form input.text {
+	margin-left: 0px;
 }
 }

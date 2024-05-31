@@ -106,3 +106,10 @@ form th{
     margin-left: 0;
   }
 }
+@media (max-width: 900px)
+{
+  form textarea{
+    width: 90%;
+    margin-left: 0;
+  }
+}

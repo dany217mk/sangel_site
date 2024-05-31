@@ -289,6 +289,9 @@ footer{
      justify-content: center;
      align-items: center;
   }
+  .rating-area.active {
+    margin-bottom: 20px;
+}
 }
 @media (max-width: 600px)
 {
